@@ -108,14 +108,14 @@ score = 0
 i = 0
 
 #loop for each question (Har question ko show krega )
-for questions in questions :
-    print(f"Q{i+1}: {questions}")#f-string for formatting , "Q" is added to show Question Number before each question
+for question in questions :
+    print(f"Q{i+1}: {question}")#f-string for formatting , "Q" is added to show Question Number before each question
 
     # har Question ke option show krne keliye
-    for options in options[i] :
-        print(options)
+    for option in options[i] :
+        print(option)
 #User se input lena , aur upper case main covert krna
-    guess = input(" Your Answer (A/B/C/D):").upper()
+    guess = input(" Your Answer (A/B/C/D):").strip().upper()
 #Check if the answer is correct or wrong
     if guess == answers[i] :
         print("CORRECT ANSWER")
@@ -126,3 +126,4 @@ for questions in questions :
 # Final Score Quiz Ke End Main Dikhana
 print("--------------- QUIZ COMPLETED ---------------")
 print(f"YOUR FINAL SCORE :{score} OUT OF 49" )
+print(" Match Winning Performance ! You Are A True Cricket Legend ;) ")
